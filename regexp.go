@@ -28,6 +28,7 @@ func IsMail(val string) bool {
 }
 
 func IsPhone(val string) bool {
+	//HasPrefix 判断字符串 val 是否以 "+" 开头
 	if strings.HasPrefix(val, "+") {
 		return IsMatch(val[1:], `\d{13}`)
 	} else {
